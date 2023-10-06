@@ -1,7 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:idc_project/login.dart';
+import 'package:idc_project/LoginPage/login.dart';
+import 'package:idc_project/firebase_options.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );runApp(const MyApp());
+} 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,14 +17,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         // Application name
-        title: 'Flutter Profile Naufal',
+        title: 'Flutter App',
         // Application theme data, you can set the colors for the application as
         // you want
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         // A widget which will be started on application startup
-        home: LoginPage());
+        home: const LoginPage());
   }
 }
 
@@ -32,7 +39,7 @@ class MyHomePage extends StatelessWidget {
         // The title text which will be shown on the action bar
         title: Text(title),
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'Hello, World!',
         ),

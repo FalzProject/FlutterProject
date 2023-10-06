@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/login.dart';
+import 'package:idc_project/LoginPage/login.dart';
 
 class CreateAccount extends StatelessWidget {
   const CreateAccount({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +27,10 @@ class CreateAccount extends StatelessWidget {
               height: 49,
               width: 291,
               decoration: BoxDecoration(
-                  color: Color.fromRGBO(111, 118, 130, 1),
+                  color: const Color.fromRGBO(111, 118, 130, 1),
                   borderRadius: BorderRadius.circular(15),
                   border: Border.all(color: Colors.white, width: 1)),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     hintText: "Nama Lengkap",
                     hintStyle: TextStyle(
@@ -40,17 +41,17 @@ class CreateAccount extends StatelessWidget {
                       color: Colors.white,
                     )),
               )),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
               height: 49,
               width: 291,
               decoration: BoxDecoration(
-                  color: Color.fromRGBO(111, 118, 130, 1),
+                  color: const Color.fromRGBO(111, 118, 130, 1),
                   borderRadius: BorderRadius.circular(15),
                   border: Border.all(color: Colors.white, width: 1)),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     hintText: "Akun Email",
                     hintStyle: TextStyle(
@@ -61,40 +62,40 @@ class CreateAccount extends StatelessWidget {
                       color: Colors.white,
                     )),
               )),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
               height: 49,
               width: 291,
               decoration: BoxDecoration(
-                  color: Color.fromRGBO(111, 118, 130, 1),
+                  color: const Color.fromRGBO(111, 118, 130, 1),
                   borderRadius: BorderRadius.circular(15),
                   border: Border.all(color: Colors.white, width: 1)),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
-                    hintText: "Nomor Telepon",
+                    hintText: "Password",
                     hintStyle: TextStyle(
                         color: Colors.white, fontSize: 15, fontFamily: "Arial"),
                     border: InputBorder.none,
                     prefixIcon: Icon(
-                      Icons.phone,
+                      Icons.lock,
                       color: Colors.white,
                     )),
               )),
-          SizedBox(
+          const SizedBox(
             height: 55,
           ),
           Center(
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginPage()));
+                      MaterialPageRoute(builder: (context) => const LoginPage()));
                 },
                 child: const Text("Buat Akun"),
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(287, 45),
-                    backgroundColor: Color.fromRGBO(123, 169, 230, 1),
+                    minimumSize: const Size(287, 45),
+                    backgroundColor: const Color.fromRGBO(123, 169, 230, 1),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)))),
           )

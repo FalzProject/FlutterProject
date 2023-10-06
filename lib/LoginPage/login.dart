@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/create.dart';
-import 'package:idc_project/home.dart';
+import 'package:idc_project/LoginPage/create.dart';
+import 'package:idc_project/HomeBase/home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,14 +35,14 @@ class LoginPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Container(
             height: 49,
             width: 291,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(111, 118, 130, 1),
+              color: const Color.fromRGBO(111, 118, 130, 1),
               borderRadius: BorderRadius.circular(15),
               border: Border.all(
                 color: Colors.white,
@@ -57,21 +58,21 @@ class LoginPage extends StatelessWidget {
                     fontFamily: "Helvetica",
                   ),
                   border: InputBorder.none,
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.person,
                     color: Colors.white,
                   )),
               style: const TextStyle(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
             height: 49,
             width: 291,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(111, 118, 130, 1),
+              color: const Color.fromRGBO(111, 118, 130, 1),
               borderRadius: BorderRadius.circular(15),
               border: Border.all(
                 color: Colors.white,
@@ -87,14 +88,14 @@ class LoginPage extends StatelessWidget {
                     fontFamily: "Helvetica",
                   ),
                   border: InputBorder.none,
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.lock,
                     color: Colors.white,
                   )),
               style: const TextStyle(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Center(
@@ -103,17 +104,17 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(),
+                        builder: (context) => const HomePage(),
                       ));
                 },
                 child: const Text("Login"),
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(291, 49),
-                    backgroundColor: Color.fromRGBO(123, 169, 230, 1),
+                    minimumSize: const Size(291, 49),
+                    backgroundColor: const Color.fromRGBO(123, 169, 230, 1),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)))),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Container(
@@ -130,9 +131,15 @@ class LoginPage extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CreateAccount()));
+                    MaterialPageRoute(builder: (context) => const CreateAccount()));
               },
-              child: Container(margin:EdgeInsets.all(5), child: const Text("Daftar Disini")),
+              child: Container(margin:const EdgeInsets.all(5), 
+              child: const Text("Daftar Disini",
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 15,
+                fontFamily: "Helvetica",
+              ))), 
             ),
           )
         ]),
