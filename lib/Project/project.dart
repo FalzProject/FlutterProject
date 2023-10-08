@@ -1,5 +1,3 @@
-import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:firebase_ui_database/firebase_ui_database.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -42,12 +40,12 @@ class ProjectPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       appBar: AppBar(
-        title: const Text("Halo Naufal Satya"),
+        title: const Text("Data Mahasiswa"),
         backgroundColor: Colors.blue,
       ),
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.green,
-          child: Tooltip(
+          child: const Tooltip(
             message: "Add Data",
             child: Icon(Icons.create_outlined),
           ),
@@ -57,7 +55,7 @@ class ProjectPage extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const FormInsertProject()));
           }),
-      drawer: DrawerPage(),
+      drawer: const DrawerPage(),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SingleChildScrollView(
@@ -77,9 +75,9 @@ class ProjectPage extends StatelessWidget {
                     DataRow(
                       cells: <DataCell>[
                         DataCell(Text(TotalData.toString())),
-                        DataCell(Text("${val['nama_project']}")),
-                        DataCell(Text("${val['deskripsi']}")),
-                        DataCell(Text("${val['link_project']}")),
+                        DataCell(Text("${val['nama_mahasiswa']}")),
+                        DataCell(Text("${val['keterangan']}")),
+                        DataCell(Text("${val['akun_amikom']}")),
                         DataCell(Text("${val['tanggal_pembuatan']}")),
                         DataCell(Text("${val['update_terakhir']}")),
                         DataCell(Row(
@@ -87,7 +85,7 @@ class ProjectPage extends StatelessWidget {
                             Tooltip(
                                 message: "Hapus Data",
                                 child: IconButton(
-                                    icon: Icon(Icons.delete, color: Colors.red),
+                                    icon: const Icon(Icons.delete, color: Colors.red),
                                     onPressed: () {
                                       delete(context, val['key'].toString());
                                     }))
@@ -110,7 +108,7 @@ class ProjectPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
-                          'Nama Project',
+                          'Nama Mahasiswa',
                           style: TextStyle(fontWeight: FontWeight.w900),
                         ),
                       ),
@@ -118,7 +116,7 @@ class ProjectPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
-                          'Deskripsi',
+                          'Keterangan',
                           style: TextStyle(fontWeight: FontWeight.w900),
                         ),
                       ),
@@ -126,7 +124,7 @@ class ProjectPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
-                          'Link Project',
+                          'Akun AMIKOM',
                           style: TextStyle(fontWeight: FontWeight.w900),
                         ),
                       ),
@@ -150,7 +148,7 @@ class ProjectPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
-                          'Action',
+                          'Edit',
                           style: TextStyle(fontWeight: FontWeight.w900),
                         ),
                       ),

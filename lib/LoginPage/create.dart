@@ -9,7 +9,7 @@ class CreateAccount extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(11, 11, 69, 1),
       body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
           Container(
             child: const Text(
               "Silahkan Isi Data Berikut",

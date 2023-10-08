@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:idc_project/HomeInterface/text.dart';
 import 'package:idc_project/LoginPage/create.dart';
-import 'package:idc_project/HomeBase/home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(11, 11, 69, 1),
       body: SafeArea(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center, children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
           Container(
             child: const Text(
               "TEST RUN",

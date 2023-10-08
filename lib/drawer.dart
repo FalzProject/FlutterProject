@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-import "package:idc_project/HomeBase/home.dart";
-import "package:idc_project/HomeBase/profile.dart";
+import 'package:idc_project/HomeInterface/profile.dart';
+import "package:idc_project/HomeInterface/text.dart";
 import "package:idc_project/LoginPage/login.dart";
 import "package:idc_project/Project/project.dart";
 
@@ -29,7 +29,7 @@ class _DrawerPageState extends State<DrawerPage> {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomePage()));
+                    MaterialPageRoute(builder: (context) => const HomePage()));//jgn lupa ganti create acc
               },
             ),
             const Divider(
@@ -43,21 +43,21 @@ class _DrawerPageState extends State<DrawerPage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const UpdateProfile()));
+                        builder: (context) => const ProjectPage()));
               },
             ),
             const Divider(
               height: 0.1,
             ),
             ListTile(
-              title: const Text("Project"),
-              leading: const Icon(Icons.table_bar),
+              title: const Text("Null"),
+              leading: const Icon(Icons.error_outline),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ProjectPage()));
+                        builder: (context) => const UpdateProfile()));
               },
             ),
             const Divider(

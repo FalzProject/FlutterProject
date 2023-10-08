@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:idc_project/Project/project.dart';
@@ -12,15 +11,15 @@ class FormInsertProject extends StatefulWidget {
 }
 
 class _FormInsertProjectState extends State<FormInsertProject> {
-  TextEditingController namaProject = TextEditingController();
-  TextEditingController deskripsi = TextEditingController();
-  TextEditingController linkProject = TextEditingController();
+  TextEditingController namaMahasiswa = TextEditingController();
+  TextEditingController keterangan = TextEditingController();
+  TextEditingController akunAmikom = TextEditingController();
 
   submit() {
     Map<String, String> Project = {
-      'nama_project': namaProject.text,
-      'deskripsi': deskripsi.text,
-      'link_project': linkProject.text,
+      'nama_mahasiswa': namaMahasiswa.text,
+      'keterangan': keterangan.text,
+      'akun_amikom': akunAmikom.text,
       'tanggal_pembuatan': DateTime.now().toString(),
       'update_terakhir': DateTime.now().toString(),
     };
@@ -51,9 +50,10 @@ class _FormInsertProjectState extends State<FormInsertProject> {
               border: Border.all(color: Colors.black, width: 1),
             ),
             child: TextField(
-              controller: namaProject,
-              decoration: InputDecoration(
-                  hintText: "Nama Project",
+              controller: namaMahasiswa,
+              textInputAction: TextInputAction.next,
+              decoration: const InputDecoration(
+                  hintText: "Nama Mahasiswa",
                   hintStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -74,9 +74,10 @@ class _FormInsertProjectState extends State<FormInsertProject> {
               border: Border.all(color: Colors.black, width: 1),
             ),
             child: TextField(
-              controller: deskripsi,
-              decoration: InputDecoration(
-                  hintText: "Deskripsi",
+              controller: keterangan,
+              textInputAction: TextInputAction.next,
+              decoration: const InputDecoration(
+                  hintText: "Keterangan",
                   hintStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -97,9 +98,10 @@ class _FormInsertProjectState extends State<FormInsertProject> {
               border: Border.all(color: Colors.black, width: 1),
             ),
             child: TextField(
-              controller: linkProject,
-              decoration: InputDecoration(
-                  hintText: "Link Project",
+              controller: akunAmikom,
+              textInputAction: TextInputAction.next,
+              decoration: const InputDecoration(
+                  hintText: "Akun AMIKOM",
                   hintStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -118,10 +120,10 @@ class _FormInsertProjectState extends State<FormInsertProject> {
                 onPressed: () {
                   submit();
                 },
-                child: const Text("Login"),
+                child: const Text('Submit'),
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(291, 49),
-                    backgroundColor: const Color.fromRGBO(123, 169, 230, 1),
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)))),
           )
