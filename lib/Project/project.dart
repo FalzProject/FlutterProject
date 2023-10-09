@@ -38,7 +38,7 @@ class ProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text("Data Mahasiswa"),
         backgroundColor: Colors.blue,

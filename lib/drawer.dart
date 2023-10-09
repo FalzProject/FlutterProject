@@ -50,14 +50,14 @@ class _DrawerPageState extends State<DrawerPage> {
               height: 0.1,
             ),
             ListTile(
-              title: const Text("Null"),
-              leading: const Icon(Icons.error_outline),
+              title: const Text("Data Profil"),
+              leading: const Icon(Icons.person_2_outlined),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const UpdateProfile()));
+                        builder: (context) => UpdateProfile()));
               },
             ),
             const Divider(
