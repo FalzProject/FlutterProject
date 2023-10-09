@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         title: 'Flutter App',
         // Application theme data, you can set the colors for the application as
         // you want
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        // theme: ThemeData(
+        //   primarySwatch: Colors.blue,
+        // ),
         scrollBehavior: const MaterialScrollBehavior(). copyWith(
           dragDevices: {
             PointerDeviceKind.mouse,
@@ -38,21 +38,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: const Center(
-        child: Text(
-          'Hello, World!',
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, //Hide notification bar
+      title: 'Dashboard',
+      theme: ThemeData(
+        primarySwatch: Colors.purple 
       ),
     );
   }

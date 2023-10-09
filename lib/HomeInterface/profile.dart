@@ -4,7 +4,7 @@ import 'package:idc_project/drawer.dart';
 class UpdateProfile extends StatefulWidget {
   const UpdateProfile({super.key});
   @override
-  _UpdateProfile createState() => _UpdateProfile();
+  State<UpdateProfile> createState() => _UpdateProfile();
 }
 
 class _UpdateProfile extends State<UpdateProfile> {
@@ -51,7 +51,7 @@ class _UpdateProfile extends State<UpdateProfile> {
           },
           child: ListView(
             children: [
-              Container(
+              SizedBox(
                 width: 130,
                 height: 130,
                 child: ClipRRect(
@@ -69,11 +69,11 @@ class _UpdateProfile extends State<UpdateProfile> {
                   child: Container(
                     height: 40,
                     width: 40,
+                    child: const Icon(Icons.edit, color: Colors.white),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(width: 4, color: Colors.white),
-                        color: Colors.black),
-                    child: const Icon(Icons.edit, color: Colors.white),
+                        color: Colors.blue),
                   )),
               const SizedBox(height: 30),
               buildTextField('Nama Lengkap', 'Orang', false),
@@ -146,6 +146,9 @@ class _UpdateProfile extends State<UpdateProfile> {
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Helvetica',
-                  color: Colors.grey))));
-}
+                  color: Colors.grey)
+                  )
+                )
+             );
+  }
 }
