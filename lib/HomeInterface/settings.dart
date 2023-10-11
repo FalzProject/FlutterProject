@@ -77,6 +77,19 @@ class _SettingsState extends State<Settings> {
             buildNotificationRow('Aktivitas Terbaru', true),
             buildNotificationRow('Deadline Tugas', true),
             buildNotificationRow('Monitoring RT', false),
+            const SizedBox(
+              height: 50,
+            ),
+            Center(
+              child: OutlinedButton(
+                onPressed: () {}, 
+                child: const Text('Log Out',
+                style: TextStyle(
+                  fontSize: 16,
+                  letterSpacing: 2.2,
+                  color: Colors.black
+              ),)),
+            )
           ],
         ),
       ),
@@ -96,7 +109,7 @@ class _SettingsState extends State<Settings> {
             Transform.scale(
               scale: 0.7, 
               child: CupertinoSwitch(
-                value: true, 
+                value: isActive, 
                 onChanged: (bool val) {}))
           ],);
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/HomeInterface/build_task.dart';
+import 'package:idc_project/HomeInterface/front.dart';
 import 'package:idc_project/LoginPage/create.dart';
 
 class LoginPage extends StatelessWidget {
@@ -104,7 +104,7 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => const DashboardPage(),
                       ));
                 },
                 child: const Text("Login"),
