@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/HomeInterface/front.dart';
+import 'package:idc_project/HomeInterface/dashboard.dart';
 import 'package:idc_project/LoginPage/create.dart';
 
 class LoginPage extends StatelessWidget {

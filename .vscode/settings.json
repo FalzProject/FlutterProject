@@ -1,4 +1,7 @@
 {
     "cmake.configureOnOpen": false,
-    "cmake.sourceDirectory": "D:/Flutter Project/idc_project/windows"
+    "cmake.sourceDirectory": "D:/Flutter Project/idc_project/windows",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

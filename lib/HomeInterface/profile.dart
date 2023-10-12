@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/drawer.dart';
+import 'package:idc_project/Side/drawer.dart';
 
 class UpdateProfile extends StatefulWidget {
   const UpdateProfile({super.key});

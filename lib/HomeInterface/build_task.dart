@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:idc_project/task.dart';
-import 'package:idc_project/drawer.dart';
+import 'package:idc_project/Side/task.dart';
+import 'package:idc_project/Side/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -27,7 +27,7 @@ class _DashboardPage extends State<DashboardPage> {
                 ),
                 ListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 30),
-                  title: Text('Dashboard',
+                  title: Text('Selamat',
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall
